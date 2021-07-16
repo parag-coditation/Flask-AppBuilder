@@ -14,6 +14,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import backref, relationship
+from sqlalchemy.sql.sqltypes import Numeric
 
 from ... import Model
 from ..._compat import as_unicode
@@ -106,6 +107,7 @@ class User(Model):
     roles = relationship("Role", secondary=assoc_user_role, backref="user")
     created_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
     changed_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
+    phone = Column(String(64))
 
     @declared_attr
     def created_by_fk(self):
