@@ -108,6 +108,9 @@ class User(Model):
     created_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
     changed_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
     phone = Column(String(64))
+    permission_json = Column(String(64))
+    is_deleted = Column(Boolean)
+    profile_path = Column(String(64))
 
     @declared_attr
     def created_by_fk(self):
