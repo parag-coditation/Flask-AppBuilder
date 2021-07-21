@@ -111,6 +111,7 @@ class User(Model):
     permission_json = Column(String(64))
     is_deleted = Column(Boolean)
     profile_path = Column(String(64))
+    designation = Column(String(64))
 
     @declared_attr
     def created_by_fk(self):
