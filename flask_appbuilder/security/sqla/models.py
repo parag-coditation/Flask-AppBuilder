@@ -11,6 +11,7 @@ from sqlalchemy import (
     String,
     Table,
     UniqueConstraint,
+    Text,
 )
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import backref, relationship
@@ -108,7 +109,7 @@ class User(Model):
     created_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
     changed_on = Column(DateTime, default=datetime.datetime.now, nullable=True)
     phone = Column(String(64))
-    permission_json = Column(String(64))
+    permission_json = Column(Text)
     is_deleted = Column(Boolean)
     profile_path = Column(String(64))
     designation = Column(String(64))
