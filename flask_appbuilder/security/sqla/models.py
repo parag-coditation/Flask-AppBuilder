@@ -111,7 +111,7 @@ class User(Model):
     phone = Column(String(64))
     permission_json = Column(Text)
     is_deleted = Column(Boolean)
-    profile_path = Column(String(64))
+    profile_path = Column(Text)
     designation = Column(String(64))
 
     @declared_attr
