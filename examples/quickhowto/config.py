@@ -35,7 +35,7 @@ LANGUAGES = {
     "ja_JP": {"flag": "jp", "name": "Japanese"},
 }
 
-FAB_API_MAX_PAGE_SIZE = 100
+FAB_API_MAX_PAGE_SIZE = 500
 # ------------------------------
 # GLOBALS FOR GENERAL APP's
 # ------------------------------
